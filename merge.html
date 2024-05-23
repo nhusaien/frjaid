@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1,viewport-fit=cover,user-scalable=no">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" type="image/jpg" sizes="512x512" href="favicons/2985-images-FrejaIcon.png">
+    <link rel="apple-touch-startup-image" href="favicons/719-images-FrejaIcon.png">
+    <meta property="og:title" content="Freja">
+    <meta property="og:description" content="Välkommen till vår version av Freja, använd appen ansvarsfullt!">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="css/css-index.css">
+    <link rel="stylesheet" href="css/css-other.css">
+    <title>Välja</title>
+</head>
+<body>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.documentElement.requestFullscreen();
+        });
+    </script>
+
+    <div class="content2">
+        <div class="headText">
+            <a class="iconLeftLink" href="login.html"><img class="iconLeft" src="images/images-left.png" alt=""></a>
+            <img class="logoImg" src="images/images-logo.png" alt="">
+        </div>
+        <div class="inputFormContainer">
+            <div class="formContent">
+                <a style="width:90%" href="freja.html"><button class="btn1" style="padding-right:20px;color:#000">Visa ID</button></a> 
+                <a style="width:90%" href="%C3%A4ndra.html"><button class="btn1" style="padding-right:20px;color:#000">Ändra ID</button></a> 
+                <button class="btn1" id="logoutBtn" style="border:2px solid #fff;padding-right:20px;background-color:#fff;display:none;width:90%">Logga ut</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        window.addEventListener("load", function() {
+            function e() {
+                if (window.innerHeight >= 844) {
+                    document.addEventListener("touchmove", n, {passive: false});
+                } else {
+                    document.removeEventListener("touchmove", n, {passive: false});
+                }
+            }
+            function n(e) { e.preventDefault(); }
+            e();
+            window.addEventListener("resize", e);
+        });
+    </script>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js').then((registration) => {
+                    console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                }, (error) => {
+                    console.log('ServiceWorker registration failed: ', error);
+                });
+            });
+        }
+    </script>
+
+    <script type="module" src="js/auth-auth.js"></script>
+    <script src="js/7895-scripts-userFunctions.js"></script>
+</body>
+</html>
