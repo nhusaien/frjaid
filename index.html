@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freja id(discord.gg/freja)</title>
+
+    <STYle>
+        html, body {
+            background-color: #1c1c1c;
+            display: flex;
+            justify-content: center;
+            background: url(https://img.freepik.com/free-vector/gradient-dynamic-blue-lines-background_23-2148995756.jpg) no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+        
+        .box{
+            margin-top: 20vh;
+            border-color: antiquewhite;
+            padding: 10vh;
+        }
+
+        *{
+            font-family: monospace;
+            color: #fff;
+        }
+        
+        h1{
+            font-size: 32pt;
+        }
+
+        p{
+            font-size: 18pt;
+            padding: 0;
+            margin: 0;
+        }
+
+        .button-22 {
+  align-items: center;
+  appearance: button;
+  background-color: #0276FF;
+  border-radius: 8px;
+  border-style: none;
+  box-shadow: rgba(255, 255, 255, 0.26) 0 1px 2px inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 0;
+  font-family: "RM Neue",sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  padding: 10px 21px;
+  text-align: center;
+  text-transform: none;
+  transition: color .13s ease-in-out,background .13s ease-in-out,opacity .13s ease-in-out,box-shadow .13s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-22:active {
+  background-color: #006AE8;
+}
+
+.button-22:hover {
+  background-color: #1C84FF;
+}
+
+    input[type=text], select {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        color: #000;
+    }
+
+    input[type=password], select {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        color: #000;
+    }
+
+    input{
+        font-size: 16pt;
+    }
+
+    </STYle>
+
+</head>
+<body>
+
+    <div class="box">
+        <h1>Login</h1>
+        <P>Username</P>
+        <input type="text">
+        <br>
+        <br>
+        <br>
+        <P>Password</P>
+        <input type="password">
+        <br>
+        <br>
+        <br>
+
+        <div style="display: flex; justify-content: center;">
+            <button class="button-22" role="button" onclick="login()">Login</button>
+        </div>
+
+    </div>
+
+    <script>
+        function login() {
+            
+            let user = document.querySelector("body > div > input[type=text]:nth-child(3)").value
+            let passwd = document.querySelector("body > div > input[type=password]:nth-child(8)").value
+
+            console.log(user, passwd)
+
+            if(user == "Owner" && passwd == "Hasse1234") {
+                window.location.replace("välja.html");
+            }
+            if(user == "Hasse" && passwd == "Hasse1234") {
+                window.location.replace("välja.html");
+            }
+        }
+
+    </script>
+</body>
+</html>
