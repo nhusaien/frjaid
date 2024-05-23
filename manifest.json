@@ -1,6 +1,6 @@
 {
-  "name": "My App Name",
-  "short_name": "App",
+  "name": "Freja ID",
+  "short_name": "Freja",
   "start_url": "/index.html",
   "display": "standalone",
   "background_color": "#ffffff",
